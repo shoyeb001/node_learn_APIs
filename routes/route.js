@@ -1,6 +1,6 @@
 import express from "express";
 import { verifyfunction, verifyuser, verifyadmin } from "../middleware/verifyToken.js";
-import { healthcheckController,loginController,signupController,productAddController,productModifyController,productViewcontroller,deleteUser,updateUser,viewUser, orderAddController, orderdetailsAddController, vieworderController, orderCompleteController } from "../controller/index.js";
+import { healthcheckController,loginController,signupController,productAddController,productModifyController,productViewcontroller,deleteUser,updateUser,viewUser, orderAddController, orderdetailsAddController, vieworderController, orderCompleteController, ArticleAddController } from "../controller/index.js";
 
 const routes = express.Router();
 
@@ -52,6 +52,10 @@ routes.get("/order/view/pending/:id",verifyadmin, vieworderController.ViewPendin
 routes.get("/order/view/delivered/:id", verifyadmin, vieworderController.ViewCompleteOrder);
 
 routes.put("/order/complete/:order_id/:id", verifyadmin, orderCompleteController.CompleteOrder);
+
+routes.post("/article/add",ArticleAddController.ArticleAdd);
+
+routes.put("/article/update/:id",ArticleAddController.articleUpdate);
 
 
 export default routes;

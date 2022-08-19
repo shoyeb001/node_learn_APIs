@@ -8,6 +8,9 @@ class customErrorHandeler extends Error{
     static unAuthorizeUser(message="User does not exits"){
         return new customErrorHandeler(401,message);
     }
+    static imageSendingEroor(message="Image upload has issue"){
+        return new customErrorHandeler(401,message);
+    }
 }
 
 export default customErrorHandeler;

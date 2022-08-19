@@ -14,3 +14,4 @@ export {default as orderAddController} from './order/orderAddController';
 export {default as orderdetailsAddController} from './orderdetails/orderdetailsAddController';
 export {default as vieworderController} from './order/vieworderController';
 export {default as orderCompleteController} from './order/orderCompleteController';
+export {default as ArticleAddController} from './article/articleAddController';
